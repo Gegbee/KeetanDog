@@ -31,10 +31,10 @@ const int baseLegAngle = -20;
 
 
 const int resetAngles[8] = {baseLegAngle, baseLegAngle, baseLegAngle, baseLegAngle, baseLegAngle, baseLegAngle, baseLegAngle, baseLegAngle};
-const int leftAngles[8] = {baseLegAngle, baseLegAngle, baseLegAngle * -1, baseLegAngle * -1, baseLegAngle * -1, baseLegAngle * -1, baseLegAngle, baseLegAngle};
+const int leftAngles[8] = {baseLegAngle, baseLegAngle, baseLegAngle * -1, 0, baseLegAngle * -1, 0, baseLegAngle, baseLegAngle};
 // The left and right angles should position the legs forward and in line with each other. 
 // If they do not, the cause for this could be incorrect calibration or incorrect defining of sides (left and right legs).
-const int rightAngles[8] = {baseLegAngle * -1, baseLegAngle * -1, baseLegAngle, baseLegAngle, baseLegAngle, baseLegAngle, baseLegAngle * -1, baseLegAngle * -1};
+const int rightAngles[8] = {baseLegAngle * -1, 0, baseLegAngle, baseLegAngle, baseLegAngle, baseLegAngle, baseLegAngle * -1, 0};
 int currentLegAngles[8] = { 0 };
 
 void setup() {
