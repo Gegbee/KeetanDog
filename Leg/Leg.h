@@ -1,7 +1,8 @@
-#ifndef Leg
-#define Leg
+#ifndef LEG_H
+#define LEG_H
 
-#include "Arduino.h"
+#include <Arduino.h>
+#include <Servo.h>
 
 class Leg {
     public:
@@ -14,11 +15,9 @@ class Leg {
         int getTopAngle();
         int getBottomAngle();
     private: 
-        int _topPin;
-        int _bottomPin;
         Servo top;
         Servo bottom;  
         bool _side;
-}
+};
 
 #endif

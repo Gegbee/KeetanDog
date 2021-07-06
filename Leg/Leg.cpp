@@ -1,18 +1,14 @@
-#include "Arduino.h"
+#include <Arduino.h>
 #include "Leg.h"
-
 #include <Servo.h>
 
-int _topPin, _bottomPin;
-bool _side;
-
-Servo top, bottom;
+// Servo top;
+// Servo bottom;  
+// bool _side;
 
 Leg::Leg(int topPin, int bottomPin, bool side) {
     pinMode(topPin, OUTPUT);
     pinMode(bottomPin, OUTPUT);
-    _topPin = topPin;
-    _bottomPin = _bottomPin;
     _side = side;
     top.attach(topPin);
     bottom.attach(bottomPin);
@@ -26,8 +22,8 @@ void Leg::setBottomAngle(int angle) {
 }
 void Leg::setLegPosition(int topAngleChange, int bottomAngleChange) {
     // When setting leg position, 90 degrees is what the legs a calibrated in to be an idle pose. This is relative change to 90 degrees.
-    if (_side = true) {
-        topAngleChange *= -1
+    if (_side == true) {
+        topAngleChange *= -1;
         bottomAngleChange *= -1;
     }
     bottom.write(90 + bottomAngleChange);
@@ -37,7 +33,7 @@ void Leg::reset() {
     top.write(90);
     bottom.write(90);
 }
-bool Leg:getSide() {
+bool Leg::getSide() {
     return _side;
 }
 int Leg::getTopAngle() {
