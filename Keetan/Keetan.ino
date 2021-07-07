@@ -38,7 +38,7 @@ const int rightAngles[8] = {baseLegAngle * -1, 0, baseLegAngle, baseLegAngle, ba
 int currentLegAngles[8] = { 0 };
 
 void setup() {
-  Serial.begin(9600);
+//  Serial.begin(9600);
   resetLegPosition();
   pinMode(JOY_BUTTON, INPUT);
   pinMode(Y_PIN, INPUT);
@@ -49,7 +49,7 @@ void setup() {
 void loop() {
   setCurrentLegAngles();
   int mapY = map(analogRead(Y_PIN), 0, 1023, -100, 100);
-  Serial.println(mapY);
+//  Serial.println(mapY);
   if (mapY > deadZone) {
     if (currentLegAngles == resetAngles) {
       leftWalk();

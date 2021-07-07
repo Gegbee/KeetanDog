@@ -2,9 +2,9 @@
 #include "Leg.h"
 #include <Servo.h>
 
-// Servo top;
-// Servo bottom;  
-// bool _side;
+Servo top;
+Servo bottom;  
+bool _side;
 
 Leg::Leg(int topPin, int bottomPin, bool side) {
     pinMode(topPin, OUTPUT);
