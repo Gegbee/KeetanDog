@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Cause_greg_can_find_friken_tone_online.ogg-daa7dcae54c98fc131a01d1687fa7407.oggstr"
+
+[deps]
+
+source_file="res://Cause_greg_can_find_friken_tone_online.ogg"
+dest_files=[ "res://.import/Cause_greg_can_find_friken_tone_online.ogg-daa7dcae54c98fc131a01d1687fa7407.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
